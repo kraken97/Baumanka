@@ -11,27 +11,29 @@ class MySet(object):
         self.myset_struct.remove(val)
     
     def union(self ,values):
+        res = MySet()
+        res.myset_struct=self.myset_struct.copy()
         for v in values.myset_struct:
-            self.add(v)
-        self.myset_struct.sort()
-        return self.myset_struct  
+            res.add(v)
+        res.myset_struct.sort();
+        return res
 
     def intersection(self,values):
+        res=MySet();
         for y in values.myset_struct:
             if(self.myset_struct.__contains__(y)):
-                self.add(y)
-        self.myset_struct.sort()  
-        print(self.myset_struct)        
-        return self.myset_struct
+                res.add(y)
+        res.myset_struct.sort()            
+        return res
     
     def diff(self,values):
-        newList=[]
+        res=MySet();
         for y in values.myset_struct:
             if(not self.myset_struct.__contains__(y)):
-                newList.append(y)
-        newList.sort()
-        self.myset_struct=newList;         
-        return newList
+                res.add(y)
+        res.myset_struct.sort()  
+           
+        return res
     def __str__(self):
         return  str(self.myset_struct)
     
@@ -51,8 +53,8 @@ print("set2 ",l)
 
 
 
-print("set1 and set 2 union",mySet.union(l))
-print(mySet.myset_struct)
 print("set1 and set 2 diff",mySet.diff(l))
+print("set1 and set 2 intersection",mySet.intersection(l))
+print("set1 and set 2 union",mySet.union(l))
 print("set1 and set 2 intersection",mySet.intersection(l))
   
