@@ -9,14 +9,14 @@ class MySet(object):
         self.myset_struct.remove(val)
     
     def union(self ,values):
-        newList=self.myset_struct;
-        for v in values.myset_struct:
-            newList.append(v)
+        newList=self;
+        for v in values:
+            newList.add(v)
         return newList    
 
     def intersection(self,values):
         newList=[]
-        for y in values.myset_struct:
+        for y in values:
             if(self.myset_struct.__contains__(y)):
                 newList.append(y)
         return newList
@@ -36,9 +36,9 @@ for a in range(0,100):
     mySet.add(a)
     
 
-mySet2=MySet()
+l=[]
 for a in range(100,200):
-    mySet2.add(a)
+    l.append(a)
 
-print(mySet.union(mySet2))
+print(mySet.union(l))
   
