@@ -29,4 +29,3 @@ with open("Output.txt", "w") as text_file:
     print(res, file=text_file)
 
 
-#неправильный набор входных
