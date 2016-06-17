@@ -1,0 +1,1 @@
+['argument :1 -- value 2', 'argument :2 -- value 4', 'argument :3 -- value 8', 'argument :4 -- value 16', 'argument :5 -- value 32', 'argument :6 -- value 64', 'argument :7 -- value 128', 'argument :8 -- value 256', 'argument :9 -- value 512', 'argument :10 -- value 1024']
