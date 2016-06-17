@@ -21,7 +21,7 @@ def my_mean(l):
     else:
         res = None
         try:
-            res =sum(l) / len(l)
+            res =sum(l) / float(len(l))
         except TypeError:
             res = None
 
