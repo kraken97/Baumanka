@@ -21,6 +21,8 @@ def test_queue(cls):
         q.dequeue()
     for i in range(20, 40):
         assert q.dequeue() == i
+   
+    print("All tests passed successfully")
 
 
 class MyQueue(Queue.Queue):

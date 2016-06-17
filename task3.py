@@ -15,6 +15,8 @@ def test_mean_func(f):
     assert f([3.5,"42"]) == None
     assert f(["42"]) == None
 
+    print("All tests passed successfully")
+
 def my_mean(l):
     if len(l) == 0:
         return None
