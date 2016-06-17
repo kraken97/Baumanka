@@ -12,5 +12,8 @@ assert not is_3_5_div(3)
 assert not is_3_5_div(4)
 assert not is_3_5_div(9)
 assert not is_3_5_div('42')
-assert  is_3_5_div(3.5)
-assert  is_3_5_div(2.3)
+assert not is_3_5_div(3.5)
+assert not is_3_5_div(2.3)
+
+print("All tests passed successfully")
+

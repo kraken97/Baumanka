@@ -16,3 +16,4 @@ with open('in.txt','r') as in_f, open('out.txt','w') as out_f:
                 min_word = word
         out_f.write(max_word+'\n')
         out_f.write(min_word)
+    print("Finished successfully")

@@ -1,4 +1,4 @@
-import queue
+import Queue
 
 
 def test_queue(cls):
@@ -21,9 +21,11 @@ def test_queue(cls):
         q.dequeue()
     for i in range(20, 40):
         assert q.dequeue() == i
+   
+    print("All tests passed successfully")
 
 
-class MyQueue(queue.Queue):
+class MyQueue(Queue.Queue):
     def enqueue(self, el):
         self.put(el)
 
@@ -31,7 +33,7 @@ class MyQueue(queue.Queue):
         res = None
         try:
             res = self.get_nowait()
-        except queue.Empty:
+        except Queue.Empty:
             res = None
         return res
 
